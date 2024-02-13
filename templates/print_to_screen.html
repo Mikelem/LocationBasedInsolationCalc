@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/scrnprt.css') }}" media="all" />
+    <title>LORCAT</title>
+</head>
+<body>
+    <h3>Daily Insolation Parameters</h3>
+    <p>Latitude: {{formatted_r_lat}}&nbsp;&nbsp;&nbsp;Longitude: {{formatted_r_lon}}</p>
+    <p>Time Zone: {{time_zone}}</p>
+    <p>(Longitudes {{tzLow}} to {{tzHigh}})</p>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" class="date-column-head">Date</th>
+                <th rowspan="2" class="sunrise-column">Sunrise</th>
+                <th rowspan="2" class="sunset-column">Sunset</th>
+                <!-- <th colspan="2">Sunlight</th> -->
+                <!-- Empty cells for Date, Sunrise, Sunset as they span two rows -->
+                <th class="avg-sunlight-column">Daily Average Sunlight (W/m²)</th>
+                <th class="cosine-zenith-column">Weighted Cosine of Zenith Angle</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for day in daily_data %}
+            <tr>
+                <td class="date-column">{{ day.date }}</td>
+                <td class="sunrise-column">{{ day.sunrise_time }}</td>
+                <td class="sunset-column">{{ day.sunset_time }}</td>
+                <td class="avg-sunlight-column">{{ '%.2f' % day.avg_sunlight }}</td>
+                <td class="cosine-zenith-column">{{ '%.3f' % day.cosine_zenith }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</body>
+
+</html>

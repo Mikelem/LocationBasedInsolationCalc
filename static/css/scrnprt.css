@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-image:url("../images/bkgd1609.jpg"); */
+    background-color:#e6faff;
+}
+h3{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+pre{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center; /* Default alignment */
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    white-space: normal; /* Allow text to wrap within the header */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Adjust text alignment as needed for specific columns */
+.date-column-head{
+    text-align: center;
+    width: 10%;
+}
+.date-column {
+    text-align: right;
+    width: 10px;
+}    
+.sunrise-column, .sunset-column {
+    text-align: center;
+    max-width: 10px;
+}
+
+/* Column width adjustments */
+.avg-sunlight-column, .cosine-zenith-column {
+    text-align: center; /* Align numbers to the right */
+    max-width: 5px; /* Example width, adjust as needed */
+}
+
+

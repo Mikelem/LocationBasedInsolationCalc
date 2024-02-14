@@ -7,7 +7,7 @@ Lat, Lon, Year, Month (Month can be a number from 1-12, for one month at a time 
 
 This program can run in two ways:
 
-## 1. In a Flask environment as a web page which simulates the NASA site at:
+### 1. In a Flask environment as a web page which simulates the NASA site at:
 
 https://data.giss.nasa.gov/modelE/ar5plots/srlocat.html
 
@@ -25,9 +25,8 @@ $ srlocat.py
 
 Running on a local server: http://127.0.0.1:5000
 
-## Home page: static/srlocat.html
 
-## 2. Or it can be run locally via the command line:
+### 2. Or it can be run locally via the command line and output lines of data in the Terminal window:
 
 ``` bash
 $ calcs.py
@@ -43,11 +42,14 @@ mcmurdo = (2, 2024, -77.85, 166.667)
 denver = (2, 2024, 39.739, -104.9903)
 ```
 
-Or you can create your own tuple with (month, year, lat, lon).
+Alternatively, you can create your own tuple with (month, year, lat, lon) and substitute it in the line:
+
+''' python
+daily_data = loop_months(*your_locale)
+'''
 
 ``` python 
 daily_data = loop_months(*mcmurdo)
-
 # Print out the lines of data:
 for data in daily_data:
     print(f"{data['date']:>10}{data['sunrise_time']:>13}{data['sunset_time']:>13}{data['avg_sunlight']:11.2f}{data['cosine_zenith']:11.3f}")

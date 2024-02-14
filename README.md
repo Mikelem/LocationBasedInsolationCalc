@@ -44,9 +44,10 @@ denver = (2, 2024, 39.739, -104.9903)
 
 Alternatively, you can create your own tuple with (month, year, lat, lon) and substitute it in the line:
 
-''' python
+``` python
 daily_data = loop_months(*your_locale)
-'''
+```
+
 
 ``` python 
 daily_data = loop_months(*mcmurdo)

@@ -49,8 +49,9 @@ if __name__ == '__main__':
     # Test scenarios:
     boulder = (2, 2024, 40.015, -105.270)
     mcmurdo = (2, 2024, -77.85, 166.667)
+    ellesmere = (2, 2024, 78.7833, -72.5000)
     denver = (2, 2024, 39.739, -104.9903)
-    daily_data = loop_months(*mcmurdo)
+    daily_data = loop_months(*ellesmere)
     # Check print out for data
     for data in daily_data:
-        print(f"{data['date']:>10}{data['sunrise_time']:>13}{data['sunset_time']:>13}{data['avg_sunlight']:11.2f}{data['cosine_zenith']:11.3f}")
+        print(f"{data['date']:>10}{data['sunrise_time']:>18}{data['sunset_time']:>18}{data['avg_sunlight']:11.2f}{data['cosine_zenith']:11.3f}")

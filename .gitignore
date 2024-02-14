@@ -22,3 +22,6 @@ ENV/
 # Ignore database files
 *.db
 *.sqlite3
+
+# Ignore the OrigFilesreplaced folder
+OrigFilesreplaced/

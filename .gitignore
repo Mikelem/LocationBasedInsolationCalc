@@ -1,0 +1,24 @@
+# .gitignore
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+
+# Ignore Python virtual environments
+venv/
+*.venv
+ENV/
+
+# Ignore Jupyter Notebook files
+.ipynb_checkpoints
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.db
+*.sqlite3
